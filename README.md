@@ -26,3 +26,11 @@ pythonforbeginners.com/requests/using-requests-in-python
 mongodb.com/blog/post/getting-started-with-python-and-mongodb
 
 
+## Resolução 
+
+Como é possivel notar na imagem abaixo o termo pesquisado na função ```register_new_tag``` , retorna a ```id``` . ```shortcode``` que é o identificador usado pra acessar os comentarios e ```text_post``` que é o alvo principal do script e os respectivos comentarios ```comments``` para cada post
+
+No código é criado o banco de dados ```socialnetwork``` e foi implementado para que cada termo pesquisado na função ```register_new_tag``` na realidade crie uma nova coleção de mesmo nome. Assim é possivel amarzenar dados de acordo com seu assunto principal.
+
+![print](https://github.com/nilberthsouza/Desafio-Crawler-Intagram/blob/master/assets/Screenshot_2020-03-20_18-13-03.png)
+
