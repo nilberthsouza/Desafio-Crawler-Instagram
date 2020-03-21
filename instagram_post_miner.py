@@ -44,7 +44,6 @@ mongodb.com/blog/post/getting-started-with-python-and-mongodb
 
 #!pip install pymongo
 import requests
-import pandas as pd
 from pymongo import MongoClient
 import json
 
@@ -55,7 +54,7 @@ def return_comments(shortcode_id):
     knowed_page = str('https://www.instagram.com/p/'+ shortcode_id+'/?__a=1')
     coments = json.loads(str(requests.get(knowed_page).text))
     total_comments = []
-    for j in range(len(coments['graphql']['shortcode_media']['edge_media_to_parent_comment']['edges'])):
+    for j in range(len(coments['graphql']['shortcode_media']['edge_media_to_parent_comment']['edges'])-1):
                    total_comments.append(coments['graphql']['shortcode_media']['edge_media_to_parent_comment']['edges'][j]['node']['text'])
     return total_comments
 
