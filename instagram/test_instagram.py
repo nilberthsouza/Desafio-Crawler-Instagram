@@ -10,10 +10,15 @@ class TestConvert(unittest.TestCase):
 
 class TestPublications(unittest.TestCase):
 
-    def test_showPublications(self):
+    def test_takePublications(self):
         test_pub= Publications()
         test_pub.link = Convert.from_key_to_link('dev')
-        result = test_pub.showPublications()
+        result = test_pub.takePublications()
         self.assertEqual(type(result),str)
-
+    
+    def test_takeTextPub(self):
+        test_pub = Publications()
+        test_pub.link = Convert.from_key_to_link('dev')
+        result = test_pub.takeTextPublications()
+        self.assertEqual(type(result),list)
 
